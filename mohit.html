@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+    <style>
+    .main{
+      border: 1px solid black;
+      height: 500px;
+      width: 500px;
+      display: flex;
+    
+   
+      gap: 50px;
+      flex-flow: wrap;
+ 
+    }
+    .circle{
+      border: 1px solid black;
+      height: 100px;
+      width: 80px;
+      border-radius: 100%;
+      margin: 10px;
+  
+      
+    }
+    .rectangle{
+      border: 1px solid black;
+      height: 100px;
+      width: 300px;
+      margin: 10px;
+    }
+    .square{
+      border: 1px solid black;
+      height: 100px;
+      width: 100px;
+      margin: 10px;
+    }
+    </style>
+
+</head>
+<body>
+  <div class="main">
+ <div id="circle" class="circle">hi</div>
+ <div id="square" class="square">mohit</div>
+ <div id="rectangle" class="rectangle">here</div>
+</div>
+  <button onclick='hello()' >Click here!</button>
+</body>
+<script>
+
+  const hello = () =>{
+document.getElementById('circle').style.borderRadius='0'
+document.getElementById('circle').innerHTML='hello'
+document.getElementById('square').style.borderRadius='100%'
+document.getElementById('square').innerHTML='veer'
+document.getElementById('rectangle').style.width='200px'
+document.getElementById('rectangle').innerHTML='their'
+
+  }
+
+
+</script>
+
+</html>
