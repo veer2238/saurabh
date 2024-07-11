@@ -3,43 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Layout</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
 </head>
+<style>
+    .main{
+        height: 97vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+gap: 10px;
+        input{
+            padding: 10px;
+
+        }
+button{
+    padding: 10px;
+    background: #000;
+    color: white;
+}
+.message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    }
+</style>
 <body>
-    <div class="header">
-        <h1>Header Section</h1>
+    <div class="main">
+        <p id="captcha"></p>
+        <input type="text" placeholder="match" id="match"/><span><button onclick="window.location.reload()">Refresh</button></span>
+        <button onclick="checkCaptcha()">Click Here</button>
+        <div class="message" id="message"></div>
     </div>
-    
- 
-        <div class="card-container">
-         
-            <div class="card">Card 1</div>
-            <div class="card">Card 2</div>
-            <div class="card">Card 3</div>
-            <div class="card">Card 4</div>
-            <div class="card">Card 5</div>
-            <div class="card">Card 6</div>
-            <div class="card">Card 7</div>
-            <div class="card">Card 8</div>
-            <div class="card">Card 9</div>
-            <div class="card">Card 10</div>
-            <div class="card">Card 11</div>
-            <div class="card">Card 12</div>
-            <div class="card">Card 13</div>
-            <div class="card">Card 14</div>
-            <div class="card">Card 15</div>
-          
-       
-      </div>
-    
-    <div class="footer">
-        <p>Footer Section</p>
-    </div>
-
-
-    <div class="circle" id="demo">Header</div>
 </body>
+<script>
 
-<script src="./index.js"></script>
+   const random = Math.floor(Math.random() * 1000000);
+
+   if(random.toString().length>5 && random.toString().length<7){
+      document.getElementById('captcha').innerHTML=random
+   }
+   else{
+      window.location.reload()
+   }
+
+
+    const checkCaptcha = ()=>{
+
+     const captcha = document.getElementById('captcha').innerHTML
+     const match = document.getElementById('match').value
+     const message = document.getElementById('message');
+
+     if(captcha===match){
+        message.innerHTML = '***Captcha matches';
+        message.style.color = 'green';
+     }else{
+        alert('wrong')
+        window.location.reload()
+     }
+    }
+</script>
 </html>
