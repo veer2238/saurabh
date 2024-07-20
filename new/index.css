@@ -1,0 +1,180 @@
+body{
+  margin: 0;
+}
+
+.testimonal{
+  background-color: #FB8E0B;
+  height: 450px;
+
+  @media screen and (max-width: 1025px) {
+    &{
+      height: 550px;
+     
+    }
+  }
+
+.shap-main{
+  position: absolute;
+  top: 0;
+  left: 0;
+  .shap{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    span{
+      border: 1px solid #FFFFFF;
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      position: absolute;
+
+      &:nth-child(1){
+ top: -120px;
+ left: -120px;
+      }
+
+      &:nth-child(2){
+        top: -120px;
+        left: -120px;
+        height: 240px;
+        width: 240px;
+        }
+
+        &:nth-child(3){
+          top: -120px;
+          left: -120px;
+          height: 280px;
+          width: 280px;
+          }
+
+          &:nth-child(4){
+            top: -120px;
+            left: -120px;
+            height: 320px;
+            width: 320px;
+            }
+
+
+
+
+
+    }
+  }
+
+}
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+   
+
+
+
+    h3{
+      font-size: 25px;
+      font-family: sans-serif;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .cards{
+      display: flex;
+      gap: 40px;
+      flex-flow: wrap;
+      margin: 0 10px;
+    
+
+.main-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (max-width: 1025px) {
+    &:nth-child(2){
+      display: none;
+     
+    }
+  }
+      .card{
+        height: fit-content;
+        max-width: 470px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+
+
+      
+    
+
+        .triangle {
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 14px solid rgb(255, 255, 255);
+          transform: translate(-50%,6px) rotate(180deg);
+          position: absolute;
+          bottom: -6px;
+          left: 50%;
+          
+      }
+
+
+        h3{
+          color: #FD6003;
+          letter-spacing: 2px;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        p{
+          color:#383a47a8;
+          text-align: center;
+          line-height: 30px;
+        }
+
+      }
+
+      .circle{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      
+
+        .image{
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          background-color: white;
+        }
+
+        .text{
+          display: flex;
+          flex-direction: column;
+          color: white;
+          line-height: 10px;
+          margin-top: 20px;
+
+          span{
+            font-weight: 700;
+          }
+        
+        }
+      }
+    }
+    }
+  }
+}
